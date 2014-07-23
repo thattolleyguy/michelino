@@ -24,8 +24,11 @@ namespace Michelino
             if (BTSerial.available() <= 0)
                 return false; // no commands available
             char ch = BTSerial.read();
+            BTSerial.print("Received char:");
+            BTSerial.println(ch);
             switch (ch) {
                 case '8': // up
+                    BTSerial.println("Moving forward");
                     cmd.goForward();
                     break;
                 case '2': // down

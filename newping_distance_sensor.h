@@ -11,9 +11,9 @@ namespace Michelino
     class DistanceSensor : public DistanceSensorDriver
     {
     public:
-        DistanceSensor(int triggerPin, int echoPin, int maxDistance)
+        DistanceSensor(int triggerPin, int echoPin)
             : DistanceSensorDriver(maxDistance), 
-              sensor(triggerPin, echoPin, maxDistance)
+              sensor(triggerPin, echoPin)
         {
         }
         
